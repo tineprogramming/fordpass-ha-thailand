@@ -23,7 +23,7 @@ UPDATE_INTERVAL_DEFAULT = 900
 
 REGION = "region"
 
-REGION_OPTIONS = ["UK&Europe", "Australia", "North America & Canada"]
+REGION_OPTIONS = ["UK&Europe", "Australia", "North America & Canada", "Thailand"]
 
 SENSORS = {
     "odometer": {"icon": "mdi:counter", "state_class": "total", "device_class": "distance"},
