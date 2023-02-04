@@ -382,7 +382,7 @@ class Vehicle(object):
         Issue a start command to the engine
         """
         return self.__requestAndPoll(
-            "PUT", f"{baseUrl}/vehicles/v2/{self.vin}/engine/start"
+            "PUT", f"{baseUrl}/vehicles/v5/{self.vin}/engine/start"
         )
 
     def stop(self):
@@ -390,7 +390,7 @@ class Vehicle(object):
         Issue a stop command to the engine
         """
         return self.__requestAndPoll(
-            "DELETE", f"{baseUrl}/vehicles/v2/{self.vin}/engine/start"
+            "DELETE", f"{baseUrl}/vehicles/v5/{self.vin}/engine/start"
         )
 
     def lock(self):
@@ -398,7 +398,7 @@ class Vehicle(object):
         Issue a lock command to the doors
         """
         return self.__requestAndPoll(
-            "PUT", f"{baseUrl}/vehicles/v2/{self.vin}/doors/lock"
+            "PUT", f"{baseUrl}/vehicles/v5/{self.vin}/doors/lock"
         )
 
     def unlock(self):
@@ -406,7 +406,7 @@ class Vehicle(object):
         Issue an unlock command to the doors
         """
         return self.__requestAndPoll(
-            "DELETE", f"{baseUrl}/vehicles/v2/{self.vin}/doors/lock"
+            "DELETE", f"{baseUrl}/vehicles/v5/{self.vin}/doors/lock"
         )
 
     def enableGuard(self):
