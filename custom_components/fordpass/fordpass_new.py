@@ -29,6 +29,7 @@ region_lookup = {
     "UK&Europe": "1E8C7794-FF5F-49BC-9596-A1E0C86C5B19",
     "Australia": "5C80A6BB-CF0D-4A30-BDBF-FC804B5C1A98",
     "North America & Canada": "71A3AD0A-CF46-4CCF-B473-FC7FE5BC4592",
+    "Thailand": "39CD6590-B1B9-42CB-BEF9-0DC1FDB96260",
 }
 
 baseUrl = "https://usapi.cv.ford.com/api"
@@ -381,7 +382,7 @@ class Vehicle(object):
         Issue a start command to the engine
         """
         return self.__requestAndPoll(
-            "PUT", f"{baseUrl}/vehicles/v2/{self.vin}/engine/start"
+            "PUT", f"{baseUrl}/vehicles/v5/{self.vin}/engine/start"
         )
 
     def stop(self):
@@ -389,7 +390,7 @@ class Vehicle(object):
         Issue a stop command to the engine
         """
         return self.__requestAndPoll(
-            "DELETE", f"{baseUrl}/vehicles/v2/{self.vin}/engine/start"
+            "DELETE", f"{baseUrl}/vehicles/v5/{self.vin}/engine/start"
         )
 
     def lock(self):
@@ -397,7 +398,7 @@ class Vehicle(object):
         Issue a lock command to the doors
         """
         return self.__requestAndPoll(
-            "PUT", f"{baseUrl}/vehicles/v2/{self.vin}/doors/lock"
+            "PUT", f"{baseUrl}/vehicles/v5/{self.vin}/doors/lock"
         )
 
     def unlock(self):
@@ -405,7 +406,7 @@ class Vehicle(object):
         Issue an unlock command to the doors
         """
         return self.__requestAndPoll(
-            "DELETE", f"{baseUrl}/vehicles/v2/{self.vin}/doors/lock"
+            "DELETE", f"{baseUrl}/vehicles/v5/{self.vin}/doors/lock"
         )
 
     def enableGuard(self):
